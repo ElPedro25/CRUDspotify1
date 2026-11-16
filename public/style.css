@@ -1,0 +1,434 @@
+/* style.css - Tema Spotify */
+@import url('https://fonts.googleapis.com/css2?family=Circular+Std:wght@400;700&family=Montserrat:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Barra de Navegação Superior */
+.navbar {
+    width: 100%;
+    background-color: #000000;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #282828;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    background-color: #1DB954;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.nav-links a, .btn-sair {
+    color: #B3B3B3;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links a:hover, .btn-sair:hover {
+    color: #FFFFFF;
+}
+
+/* Containers e Cartões */
+.container {
+    width: 100%;
+    max-width: 460px;
+    background-color: #181818;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 40px 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+.container-admin {
+    width: 95%;
+    max-width: 1250px;
+    background-color: #181818;
+    padding: 32px;
+    border-radius: 12px;
+    margin: 30px 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.subtitulo {
+    color: #B3B3B3;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+}
+
+/* Formulários e Inputs */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+}
+
+input {
+    background-color: #121212;
+    border: 1px solid #727272;
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #FFFFFF;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+}
+
+input:disabled {
+    background-color: #242424;
+    color: #727272;
+    border-color: #333333;
+}
+
+/* Botões Estilo Spotify (Pill Shape) */
+.btn-spotify {
+    width: 100%;
+    background-color: #1DB954;
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.1s, background-color 0.2s;
+    margin-top: 8px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-spotify:hover {
+    background-color: #1ed760;
+    transform: scale(1.02);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #727272;
+    padding: 10px 20px;
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.1s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secundario:hover {
+    border-color: #FFFFFF;
+    transform: scale(1.02);
+}
+
+.btn-perigo {
+    background-color: #E91429;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-perigo:hover {
+    opacity: 0.85;
+}
+
+.btn-editar {
+    background-color: #1DB954;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 500px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.link-rodape {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #282828;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #B3B3B3;
+}
+
+.link-rodape a {
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.link-rodape a:hover {
+    color: #1DB954;
+}
+
+/* Tela de Boas-Vindas (Hero Spotify) */
+.hero-spotify {
+    width: 90%;
+    max-width: 900px;
+    background: linear-gradient(180deg, #1e3264 0%, #121212 100%);
+    border-radius: 12px;
+    padding: 60px 40px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.badge-plano {
+    background-color: #1DB954;
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.cards-musica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.card-playlist {
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.card-playlist:hover {
+    background-color: #282828;
+}
+
+.card-playlist h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.card-playlist p {
+    font-size: 0.85rem;
+    color: #B3B3B3;
+}
+
+/* Tabela de Administração (Estilo Playlist Spotify) */
+.busca-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.busca-box input {
+    flex: 1;
+    min-width: 240px;
+}
+
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.88rem;
+}
+
+thead tr {
+    border-bottom: 1px solid #282828;
+    color: #B3B3B3;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+th, td {
+    padding: 14px 12px;
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid #222222;
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #2A2A2A;
+}
+
+.painel-edicao {
+    background-color: #202020;
+    padding: 24px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 1px solid #333333;
+}
+
+/* Ajustes para a estrutura direta do HTML */
+center.container, center.container-admin {
+    display: block;
+    text-align: left;
+}
+
+center.container h1, center.container-admin h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+center.container label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+center.container input[type="text"],
+center.container input[type="number"] {
+    width: 100%;
+}
+
+center.container input[type="button"].btn-perigo {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 16px;
+}
+
+/* Padroniza TODOS os botões de navegação (inclusive o .btn-perigo) em todas as páginas */
+center.container button.btn-spotify,
+center.container button.btn-secundario,
+center.container button.btn-perigo {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    display: block;
+    text-align: center;
+}
+
+.container-admin button.btn-spotify,
+.container-admin button.btn-secundario,
+.container-admin button.btn-perigo {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Corrige a cor e tira o sublinhado dos links dentro dos botões em TODAS as páginas */
+button a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container-admin table {
+    display: block;
+    overflow-x: auto;
+}

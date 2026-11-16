@@ -1,0 +1,37 @@
+{
+  "pessoas": [
+    {
+      "id": "02f4",
+      "nome": "Mogi",
+      "idade": "450",
+      "cpf": "123"
+    },
+    {
+      "nome": "Azulllll",
+      "idade": "89",
+      "cpf": "888",
+      "id": "da80"
+    },
+    {
+      "nome": "Fernandão",
+      "idade": "77",
+      "cpf": "444",
+      "id": "b8dc"
+    },
+    {
+      "nome": "pedro",
+      "idade": "20",
+      "cpf": "",
+      "sobrenome": "melo",
+      "email": "pedro.melo10@gmail.com",
+      "senha": "pedro",
+      "rua": "são joão",
+      "cep": "1234567890",
+      "cidade": "Mogi das Cruzes",
+      "estado": "são paulo",
+      "telefone": "1234567890",
+      "id": "m_THGkNmgOg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

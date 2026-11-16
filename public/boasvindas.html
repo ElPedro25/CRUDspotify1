@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="boasvindas.html" class="logo">
+            <span class="logo-icon">)))</span> Spotify
+        </a>
+        <div class="nav-links">
+            <a href="admin.html" id="navAdmin" style="display: none; color: #1DB954;">Administração</a>
+            <button onclick="sair()" class="btn-sair">Sair</button>
+        </div>
+    </header>
+
+    <div class="hero-spotify">
+        <span class="badge-plano" id="badgePerfil">Ouvinte Spotify</span>
+        <h1 id="mensagemBoasVindas" style="font-size: 2.5rem;">Bem-vindo ao Spotify!</h1>
+        <p class="subtitulo" style="font-size: 1.05rem; margin-top: 10px;">
+            Milhões de músicas e podcasts para você curtir onde estiver.
+        </p>
+
+        <div id="boxAdmin" style="display: none; margin-top: 24px;">
+            <a href="admin.html" class="btn-spotify" style="max-width: 320px;">
+                Acessar Administração de Usuários
+            </a>
+        </div>
+
+        <div class="cards-musica">
+            <div class="card-playlist">
+                <h3>🔥 Top Brasil</h3>
+                <p>As músicas mais tocadas no momento.</p>
+            </div>
+            <div class="card-playlist">
+                <h3>🎧 Mix Diário</h3>
+                <p>Feito especialmente com o que você mais ouve.</p>
+            </div>
+            <div class="card-playlist">
+                <h3>⚡ Lançamentos</h3>
+                <p>Novidades fresquinhas toda sexta-feira.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+        if (!usuario) {
+            window.location.href = 'index.html';
+        } else {
+            document.getElementById('mensagemBoasVindas').innerText = `Bem-vindo ao Spotify, ${usuario.nome}!`;
+
+            if (usuario.isAdmin) {
+                document.getElementById('badgePerfil').innerText = 'Administrador';
+                document.getElementById('navAdmin').style.display = 'inline-block';
+                document.getElementById('boxAdmin').style.display = 'block';
+            }
+        }
+
+        function sair() {
+            localStorage.removeItem('usuarioLogado');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
